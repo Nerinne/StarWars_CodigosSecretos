@@ -4,14 +4,16 @@ public class nivel1{
     public static void main(String[] args)throws IOException, InterruptedException{
         limpiar.limpiar();
 
-        int S1 = (int)(1 + (10*Math.random())), 
-        S2 = (int)(20 + ((30-20+1)*Math.random())), respuesta = 0, solucion = 0;
+        int S1 = ((int)(10*Math.random())) +1, 
+        S2 = (int)(20 + ((30-20+1)*Math.random())), 
+        respuesta = 0, solucion = 0;
 
         Scanner sc = new Scanner(System.in);
 
         for(int i = S1, i <= S2; i++){
             solucion += i;
         }
+
         System.out.println("Los problemas empiezan cuando deben realizar un salto hiperespacial hasta al
 sistema" + S1 + "en el sector " + S2 + ", pero el sistema de navegación está estropeado y el
 computador tiene problemas para calcular parte de las coordenadas de salto.\n
@@ -24,7 +26,7 @@ calcular el sumatorio entre el nº del sistema y el nº del sector (ambos inclus
             System.out.println("Correcto! Ahora podremos llegar al sector correcto!");
             Thread.sleep(1000);
             nivel2.main(new String[]{});
-        } else{}
+        } else
             perder.main(new String[]{});
         
     }

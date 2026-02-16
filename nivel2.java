@@ -4,14 +4,16 @@ public class nivel2{
     public static void main(String[] args)throws IOException, InterruptedException{
         limpiar.limpiar();
         
-        int P1 = (int)(1 + (7*Math.random())), 
-        P2 = (int)(8 + ((12-8+1)*Math.random())), respuesta = 0, solucion = 0;
+        int P1 = ((int)(7*Math.random())) +1, 
+        P2 = (int)(8 + ((12-8+1)*Math.random())), 
+        respuesta = 0, solucion = 1;
 
         Scanner sc = new Scanner(System.in);
 
-        for(int i = S1, i <= S2; i++){
-            solucion += i;
+        for(int i = S1, i <= S2; i++){ //Productorio entre los dos numeros
+            solucion *= i;
         }
+
         System.out.println("Gracias a Chewbacca consiguen llegar al sistema correcto y ven a lo lejos la estrella
 de la muerte.\n Como van en una nave imperial robada se aproximan lentamente con
 la intención de pasar desapercibidos.\n De repente suena el comunicador.\n “Aquí
@@ -25,10 +27,11 @@ es el productorio entre el nº del agente y el nº de la nave (ambos inclusive).
 ¿Cuál es el código?");
         respuesta = sc.nextInt();
         if(respuesta == solucion){
-            System.out.println("Correcto! Ahora podremos llegar al sector correcto!");
+            System.out.println("Correcto! Ya tenemos el código. Ahora ya podemos abrirnos paso!");
             Thread.sleep(1000);
             nivel3.main(new String[]{});
-        }
+        } else
+            perder.main(new String[]{});
         
     }
 }
