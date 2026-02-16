@@ -1,8 +1,8 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class fin{
     public static void main(String[] args)throws IOException, InterruptedException{
-        limpiar.limpiar();
+        limpiar.clear();
         System.out.println("Gracias por jugar :D");
     }
 }
