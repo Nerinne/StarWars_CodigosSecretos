@@ -3,7 +3,7 @@ import java.io.*;
 
 public class inicio {
   public static void main(String[] args)throws IOException, InterruptedException{
-    limpiar.limpiar();
+    limpiar.clear();
     Scanner sc = new Scanner(System.in);
     
     System.out.println("=== STAR WARS CÓDIGOS SECRETOS ===\n" + 
